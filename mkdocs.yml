@@ -1,0 +1,66 @@
+site_name: Mingzhang (Norman) Zhu
+site_url: https://mingzhangzhu.org
+site_author: Mingzhang Zhu
+
+nav:
+  - Home: index.md
+  - Projects: 
+    - Overview: Project/projects.md
+    - Cosmo: Project/Cosmo/cosmo.md
+    - EEWOC: Project/EEWOC/eewoc.md
+    - Robocup: Project/Robocup/robocup.md
+  - Publication: Publication/publication.md
+  - Contacts: contact.md
+
+markdown_extensions:
+- admonition
+- attr_list
+- md_in_html
+- footnotes
+
+- pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- toc:
+    permalink: true
+
+
+extra_css:
+- stylesheets/extra.css
+
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+        
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.footer
+    - navigation.indexes
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+
+    - toc.integrate
+
+

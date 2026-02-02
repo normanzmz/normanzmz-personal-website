@@ -1,0 +1,449 @@
+/* --- Two-column profile layout --- */
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-left {
+  flex: 0 0 400px;
+  text-align: center;
+}
+
+.profile-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.md-typeset h3 {
+  font-weight: 700;  /* 700 = bold */
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 1rem;
+}
+
+.profile-name {
+  margin: 0.5rem 0;
+}
+
+.profile-buttons .md-button {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-left, .profile-right {
+    text-align: center;
+  }
+}
+
+/* homepage selected project section */
+/* Row layout */
+.proj-row {
+  display: grid;
+  grid-template-columns: 420px 1fr;   /* media | text */
+  gap: 1.25rem;
+  align-items: start;
+  margin: 1.25rem 0 2rem;
+}
+
+.proj-media {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+/* Image / video sizing */
+.proj-media img,
+.proj-media video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive YouTube wrapper (16:9) */
+.proj-media .yt {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.proj-media .yt iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+/* Text area */
+.proj-text h3 { margin: 0 0 .35rem; }
+.proj-text p { margin: 0 0 .5rem; }
+.proj-text ul { margin: .25rem 0 1rem 1.2rem; }
+
+/* Compact “Page” button spacing */
+.proj-text .md-button { margin-top: .25rem; }
+
+/* Mobile: stack vertically */
+@media (max-width: 900px) {
+  .proj-row {
+    grid-template-columns: 1fr;
+  }
+  .proj-media img, .proj-media video { height: 220px; }
+}
+
+/* ================================
+   Projects page: 2 columns x 3 rows grid + hover overlay
+   (Used by projects.md)
+   ================================ */
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 1rem 0 2rem;
+}
+
+@media (max-width: 900px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}
+
+.proj-card {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+  background: var(--md-default-bg-color);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.proj-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(0,0,0,.06);
+}
+
+.proj-thumb img,
+.proj-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover overlay */
+.proj-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px;
+  background: linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.05));
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.proj-card:hover .proj-overlay,
+.proj-card:focus .proj-overlay,
+.proj-card:focus-within .proj-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proj-overlay h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.proj-overlay p {
+  margin: 0;
+  color: rgba(255,255,255,.92);
+  font-size: .92rem;
+  line-height: 1.35;
+}
+
+/* Placeholder cards (so the template is visible even without hover) */
+.proj-card.proj-placeholder .proj-thumb {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.05) 14px,
+    rgba(0,0,0,.09) 14px,
+    rgba(0,0,0,.09) 28px
+  );
+}
+
+.proj-card.proj-placeholder .proj-overlay {
+  opacity: 1;
+  transform: translateY(0);
+  background: linear-gradient(to top, rgba(0,0,0,.60), rgba(0,0,0,.18));
+}
+
+/* Project banner (per-page) */
+.project-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.project-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 360px;
+}
+.project-banner-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 8px 22px 4px;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));
+  display: flex;
+  align-items: flex-end;
+}
+.project-title {
+  margin: 0;
+  color: #000000;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.25rem, 3.2vw, 2rem);
+  line-height: 1.05;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-shadow: none;
+  transform: translateY(18px);
+}
+
+@media (max-width: 600px) {
+  .project-banner img { max-height: 220px; }
+  .project-banner-overlay { padding: 12px; }
+  .project-title { font-size: 1.25rem; }
+}
+
+/* Background section: left text, right stacked images with equal height */
+.bg-section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr; /* text | images */
+  gap: 1rem;
+  align-items: start;
+  margin: 1rem 0 2rem;
+}
+.bg-left p { margin: 0 0 0.9rem; }
+.bg-right {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  height: 360px;        /* 👈 master height */
+}
+
+.bg-right img {
+  height: 100%;
+  width: auto;          /* 👈 width adapts naturally */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+
+@media (max-width: 900px) {
+  .bg-section { grid-template-columns: 1fr; }
+  .bg-right { height: auto; grid-auto-rows: auto; }
+  .bg-right img { height: auto; }
+}
+
+/* Hardware platform: left parameters, right three images side-by-side equal height */
+.hw-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* text | images */
+  gap: 1rem;
+  align-items: start;
+  margin: 1rem 0 2rem;
+}
+.hw-left ul { margin: 0 0 0 1.1rem; }
+.hw-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* height: 360px; total display height for the three images */
+  gap: 8px;
+}
+.hw-figure {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%;               👈 critical */
+}
+.hw-figure img {
+  height: 300px;     /* same image height */
+  width: auto;       /* natural width */
+  object-fit: contain;
+  display: block;
+}
+.hw-figure figcaption {
+  flex: 0 0 34px;             /* fixed caption height */
+  text-align: center;
+  font-size: 0.92rem;
+  margin: 6px 0 0;
+  background: rgba(255,255,255,0.86);
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  align-self: center;
+}
+
+@media (max-width: 900px) {
+  .hw-section { grid-template-columns: 1fr; }
+  .hw-right { grid-template-columns: repeat(3, 1fr); height: 180px; }
+  .hw-figure img { height: 100%; }
+}
+
+@media (max-width: 600px) {
+  .hw-right { grid-template-columns: 1fr; height: auto; }
+  .hw-figure img { height: 220px; }
+  .hw-figure figcaption { margin-top: 8px; }
+}
+
+/* Torso section: text left, single image on right */
+.torso-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+  margin: 1rem 0 2rem;
+}
+.torso-right { display: flex; align-items: flex-start; justify-content: center; }
+.torso-figure { width: 100%; max-width: 420px; }
+.torso-figure img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block; }
+.torso-figure figcaption { text-align: center; margin-top: 8px; font-size: 0.92rem; background: rgba(255,255,255,0.86); padding: 4px 8px; border-radius: 6px; color: #000; }
+
+@media (max-width: 900px) {
+  .torso-section { grid-template-columns: 1fr; }
+  .torso-right { margin-top: 0.5rem; }
+  .torso-figure img { height: 260px; }
+}
+
+@media (max-width: 600px) {
+  .torso-figure img { height: 200px; }
+}
+
+/* Locomotion layout */
+.locomotion-section { margin: 1.25rem 0 2rem; }
+.locomotion-row {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+.locomotion-schematic img { width: 100%; height: auto; display: block; border-radius: 8px; }
+.locomotion-text p { margin: 0 0 0.9rem; text-align: justify; }
+
+.locomotion-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+.loc-video { display: flex; flex-direction: column; gap: 8px; }
+.loc-video video { width: 100%; height: 300px; object-fit: contain; display: block; border-radius: 8px; }
+.loc-video figcaption { text-align: center; font-size: 0.92rem; background: rgba(255,255,255,0.86); padding: 4px 8px; border-radius: 6px; }
+
+@media (max-width: 900px) {
+  .locomotion-row { grid-template-columns: 1fr; }
+  .locomotion-videos { grid-template-columns: repeat(3, 1fr); }
+  .loc-video video { height: 160px; }
+}
+
+@media (max-width: 600px) {
+  .locomotion-videos { grid-template-columns: 1fr; }
+  .loc-video video { height: 200px; }
+}
+
+/* Paragraph justification for Cosmo project sections */
+.bg-left p,
+.hw-left p,
+.torso-left p {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Specification table */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.spec-table th {
+  width: 42%;
+  font-weight: 600;
+  color: #000;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.spec-table tr:last-child {
+  border-bottom: none;
+}
+
+.youtube-container{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;   /* ✅ 4:3 width:height */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.youtube-container iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/* Mobile: keep 4:3 */
+@media (max-width: 600px) {
+  .youtube-container {
+    padding-bottom: 75%;
+  }
+}
