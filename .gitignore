@@ -10,6 +10,9 @@ build/
 __pycache__/
 *.pyc
 
+# unused files
+unused_material/
+
 # OS junk
 .DS_Store
 Thumbs.db
