@@ -105,7 +105,7 @@ hide:
       <li>Proximal outlier rejection for heavy noise</li>
       <li>Enabled 45 goals across 6 matches</li>
     </ul>
-    <p><a class="md-button" href="Project/Hand/hand">More Info</a></p>
+    <p><a class="md-button" href="Project/Hand/MERLIN hand">More Info</a></p>
   </div>
 </div>
 
