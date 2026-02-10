@@ -3,14 +3,16 @@ title: Publication
 ---
 
 ## Publication List 
-1. **M. Zhu\***, Q. Wang\*, *et al.*, "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer", arxiv, 2025. 
-2. **M. Zhu\***, H. Liu\*, *et al.*, "From Screen to Stage: Kid Cosmo, A Life-Like, Torque-Controlled Humanoid for Entertainment Robotics", Humanoids 25, 2025. 
-3. R. Hou, G. Fernandez, **M. Zhu**, D. Hong, "Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents", ICRA 25, 2025.
-4. R. Hou, **M. Zhu**, H. Nam, G. Fernandez, D. Hong, "Fast and robust localization for humanoid soccer robot via iterative landmark matching", ICRA 26, submitted, 2025. 
-5. G. Fernandez, *et al.*, "RoboCup 2024 Adult-Sized Humanoid Champions Guide for Hardware, Vision, and Strategy", Robot World Cup 24, 2024. 
-6. J. Quan, **M. Zhu**, D. Hong, "Re-Examining Climbing Robots: Design and Performance of a Lightweight, Low-Cost Robot with a Highly Extendable Limb", ReMAR 24, 2024. 
-7. J. Quan, **M. Zhu**, D. Hong, "A lightweight mobile robot for climbing steel structures with an extending and bending tape spring limb", IDETC-CIE 24, 2024.
-8. **M. Zhu**, Y. Shen, A. Chiluisa, J. Song, L. Fichera, Y. Liu, "Optical fiber coupling system for steerable endoscopic instruments", EMBC 21, 2021. 
+1. **M. Zhu**, *et al.*, "WHED: A Wearable Hand Exoskeleton for Natural,
+High-Quality Demonstration Collection", arxiv, 2026
+2. **M. Zhu\***, Q. Wang\*, *et al.*, "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer", arxiv, 2025. 
+3. **M. Zhu\***, H. Liu\*, *et al.*, "From Screen to Stage: Kid Cosmo, A Life-Like, Torque-Controlled Humanoid for Entertainment Robotics", Humanoids 25, 2025. 
+4. R. Hou, G. Fernandez, **M. Zhu**, D. Hong, "Model Predictive Control with Visibility Graphs for Humanoid Path Planning and Tracking Against Adversarial Opponents", ICRA 25, 2025.
+5. R. Hou, **M. Zhu**, H. Nam, G. Fernandez, D. Hong, "Fast and robust localization for humanoid soccer robot via iterative landmark matching", ICRA 26, submitted, 2025. 
+6. G. Fernandez, *et al.*, "RoboCup 2024 Adult-Sized Humanoid Champions Guide for Hardware, Vision, and Strategy", Robot World Cup 24, 2024. 
+7. J. Quan, **M. Zhu**, D. Hong, "Re-Examining Climbing Robots: Design and Performance of a Lightweight, Low-Cost Robot with a Highly Extendable Limb", ReMAR 24, 2024. 
+8. J. Quan, **M. Zhu**, D. Hong, "A lightweight mobile robot for climbing steel structures with an extending and bending tape spring limb", IDETC-CIE 24, 2024.
+9. **M. Zhu**, Y. Shen, A. Chiluisa, J. Song, L. Fichera, Y. Liu, "Optical fiber coupling system for steerable endoscopic instruments", EMBC 21, 2021. 
 
 <p align="left">
   <a class="md-button md-button--primary" href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=Q7DtlZ0AAAAJ&sortby=pubdate" target="_blank">
