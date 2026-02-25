@@ -97,13 +97,12 @@ hide:
   <div class="proj-text">
     <h3>Robotic Hand & Data Collection Device (Ongoing)</h3>
     <p>
-      Full perception stack for ARTEMIS: YOLOv8 + classical 3D geometry for detection,
-      pose, segmentation, and robust outlier handling in noisy RoboCup environments.
+      A collection of next-generation robotic hand and data collection systems, including:
     </p>
     <ul>
-      <li>Object detection + 3D pose & point-cloud fusion</li>
-      <li>Proximal outlier rejection for heavy noise</li>
-      <li>Enabled 45 goals across 6 matches</li>
+      <li>Exoskeleton-based data collection device for ROH-Hand</li>
+      <li>Next-generation dexterous robotic hand co-designed with a human-wearable demonstration device (ongoing)</li>
+      <li>Underactuated robotic hand for massage and physical interactions</li>
     </ul>
     <p><a class="md-button" href="Project/Hand/MERLIN hand">More Info</a></p>
   </div>

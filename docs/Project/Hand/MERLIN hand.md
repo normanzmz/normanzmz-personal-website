@@ -51,7 +51,7 @@ We develop a linkage-based data collection device for ROH-Hand that uses the hum
     <!-- Image 1 -->
     <figure style="
       margin:0;
-      width:320px;
+      width:800px;
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -73,7 +73,7 @@ We develop a linkage-based data collection device for ROH-Hand that uses the hum
       align-items:center;
       text-align:center;
     ">
-      <img src="/Project/Hand/Hand_real.jpg"
+      <img src="/Project/Hand/UR_teaser.jpg"
            alt="Exoskeleton prototype"
            style="height:320px; width:auto; object-fit:contain;" />
       <figcaption style="font-size:0.85em; color:#666; margin-top:0.4rem;">
@@ -99,6 +99,10 @@ We develop a linkage-based data collection device for ROH-Hand that uses the hum
 
   </div>
 </figure>
+
+
+### Publications 
+- [2026 UR](https://arxiv.org/html/2602.17908v1){ target="_blank" }
 
 ## Underactuated Robotic Hand for Shoulder Massaging 
 The massage hand uses a minimalist actuation design—one Dynamixel servo and one N20 motor—to produce diverse massage patterns without explicit force control. A double four-bar linkage and passive springs provide compliant finger motion, while an offset cam mechanism adjusts initial contact positions. The Dynamixel servo closes the fingers and adapts contact forces through mechanical compliance and kinematic coupling.
@@ -181,4 +185,3 @@ The massage hand uses a minimalist actuation design—one Dynamixel servo and on
     </figure>
   </div>
 </div>
-

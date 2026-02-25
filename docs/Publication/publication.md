@@ -3,7 +3,7 @@ title: Publication
 ---
 
 ## Publication List 
-1. **M. Zhu**, *et al.*, "WHED: A Wearable Hand Exoskeleton for Natural,
+1. **M. Zhu\***, A. Zhu\*, *et al.*, "WHED: A Wearable Hand Exoskeleton for Natural,
 High-Quality Demonstration Collection", arxiv, 2026
 2. **M. Zhu\***, Q. Wang\*, *et al.*, "A Hierarchical, Model-Based System for High-Performance Humanoid Soccer", arxiv, 2025. 
 3. **M. Zhu\***, H. Liu\*, *et al.*, "From Screen to Stage: Kid Cosmo, A Life-Like, Torque-Controlled Humanoid for Entertainment Robotics", Humanoids 25, 2025. 
