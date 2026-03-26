@@ -100,8 +100,11 @@ We develop a linkage-based data collection device for ROH-Hand that uses the hum
   </div>
 </figure>
 
+### Project Website 
+- [Website](https://dexexo-research.github.io/){ target="_blank" }
 
 ### Publications 
+- [2026 arxiv](https://arxiv.org/abs/2603.17323){ target="_blank" }
 - [2026 UR](https://arxiv.org/html/2602.17908v1){ target="_blank" }
 
 ## Underactuated Robotic Hand for Shoulder Massaging 

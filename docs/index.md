@@ -31,9 +31,9 @@ hide:
     <h3>Research Interests</h3>
     <ul>
       <li>Mechanisms and Designs </li>
-      <li>Dexterous Manipulation</li>
       <li>Humanoid Robots Locomotion</li>
-      <li>Robot Soccer</li>
+      <li>Dexterous Manipulation</li>
+      <li>Path Planning and Integration</li>
     </ul>
   </div>
 
@@ -73,29 +73,10 @@ hide:
 
 <div class="proj-row">
   <div class="proj-media">
-    <img src="Project/Robocup/robocup_project.png" alt="ARTEMIS RoboCup">
-  </div>
-  <div class="proj-text">
-    <h3>Humanoid Soccer Competition: Robocup</h3>
-    <p>
-      Full perception stack for ARTEMIS: YOLOv8 + classical 3D geometry for detection,
-      pose, segmentation, and robust outlier handling in noisy RoboCup environments.
-    </p>
-    <ul>
-      <li>Object detection + 3D pose & point-cloud fusion</li>
-      <li>Proximal outlier rejection for heavy noise</li>
-      <li>Enabled 45 goals across 6 matches</li>
-    </ul>
-    <p><a class="md-button" href="Project/Robocup/robocup">More Info</a></p>
-  </div>
-</div> 
-
-<div class="proj-row">
-  <div class="proj-media">
     <img src="Project/Hand/hand_cover_image.png" alt="Hand">
   </div>
   <div class="proj-text">
-    <h3>Robotic Hand & Data Collection Device (Ongoing)</h3>
+    <h3>Robotic Hands & Data Collection Devices (Ongoing)</h3>
     <p>
       A collection of next-generation robotic hand and data collection systems, including:
     </p>
@@ -108,6 +89,24 @@ hide:
   </div>
 </div>
 
+<div class="proj-row">
+  <div class="proj-media">
+    <img src="Project/Robocup/robocup_project.png" alt="ARTEMIS RoboCup">
+  </div>
+  <div class="proj-text">
+    <h3>Humanoid Soccer Competition: Robocup</h3>
+    <p>
+      Developed a full-stack navigation and locomotion pipeline for ARTEMIS, enabling robust path planning and MPC-based trajectory tracking for autonomous navigation and obstacle avoidance in dynamic and noisy RoboCup environments.
+    </p>
+    <ul>
+      <li>Integrated path planning with MPC-based trajectory tracking</li>
+      <li>Optimized and tuned dynamic locomotion for stable, high-speed operation</li>
+      <li>Hardware Maintainence for reliable field performance</li>
+      <li>Enabled 45 goals across 6 matches</li>
+    </ul>
+    <p><a class="md-button" href="Project/Robocup/robocup">More Info</a></p>
+  </div>
+</div> 
 
 
 
