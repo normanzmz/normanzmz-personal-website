@@ -32,7 +32,7 @@ const redirects = {
   'Project/Robocup/robocup/index.html': '/projects/robocup-2024.html',
   'Project/LIMMS/limms/index.html': '/projects/limms.html',
   'Project/Hand/MERLIN hand/index.html': '/projects.html',
-  'Project/Fiber/fiber/index.html': '/publications.html',
+  'Project/Fiber/fiber/index.html': '/projects/endoscopic-device.html',
   'Publication/publication/index.html': '/publications.html',
   'contact/index.html': '/#about',
 };
@@ -42,7 +42,9 @@ for (const [file, path] of Object.entries(redirects)) {
   await mkdir(dirname(target), { recursive: true });
   await writeFile(target, `<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0;url=${url}"><link rel="canonical" href="${url}"><title>Page moved | Mingzhang Zhu</title></head><body><p>This page has moved. <a href="${url}">Continue to Mingzhang Zhu’s website</a>.</p></body></html>\n`);
 }
-await copyFile(resolve(root, 'assets/home/Mingzhang-Zhu-CV.pdf'), resolve(destination, 'assets/Mingzhang Zhu_CV_2026_condensed.pdf'));
+for (const year of [2025, 2026]) {
+  await copyFile(resolve(root, 'assets/home/Mingzhang-Zhu-CV.pdf'), resolve(destination, `assets/Mingzhang Zhu_CV_${year}_condensed.pdf`));
+}
 const sitemap = pages.map(page => `<url><loc>${siteUrl}/${page === 'index.html' ? '' : page}</loc></url>`).join('\n');
 await writeFile(resolve(destination, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap}\n</urlset>\n`);
 await writeFile(resolve(destination, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
