@@ -16,3 +16,10 @@ unused_material/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Local homepage output and media tooling
+dist/
+.cache/
+assets/home/*-source.mp4
+assets/home/trimi-poster.webp
+assets/home/trimi-cube.jpg
